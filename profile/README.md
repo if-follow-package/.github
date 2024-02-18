@@ -25,7 +25,22 @@ if-follow-package
 [![github-build-published][github-image]][github-url]
 [![CI][ci-image]][ci-url]
 [![License][license-image]][licence-url]
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-farhan7reza7-blue)](https://www.linkedin.com/in/farhan7reza7/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-farhanReza-blue)](https://www.linkedin.com/in/farhan7reza7/)
+
+## Table of Contents
+
+*   [Installation](#installation)
+    *   [Install from npm registry](#install-from-npm-registry)
+    *   [Install from Github Packages registry](#install-from-github-packages-registry)
+*   [Usage](#usage)
+*   [API References](#api-references)
+*   [API Documentation](#api-documentation)
+*   [Contributing](#contributing)
+*   [Best Practices](#best-practices)
+*   [License](#license)
+*   [History](#history)
+
+
 
 Installation
 ------------
@@ -280,14 +295,40 @@ result12.then((result) => {
  
 ```
 
+
+## API References
+**if-follow-package**
+* [Classes](#api-documentation)
+  *   [IfFollow](#iffollow)
+      *   [Create an instance of IfFollow:](#create-an-instance-of-iffollow)
+      *   [Methods:](#methods)
+            *   [isFollower(username)](#isfollowerusername-1)
+            *   [isFollowing(username)](#isfollowingusername-1)
+            *   [totalFollowers()](#totalfollowers-1)
+            *   [totalFollowings()](#totalfollowings-1)
+            *   [whoNotFollowingBack()](#whonotfollowingback-1)
+            *   [whoFollowingBack()](#whofollowingback-1)
+            *   [isFollowingBack(username)](#isfollowingbackusername-1)
+            *   [unfollowNotFollowingBack(username)](#unfollownotfollowingbackusername-1)
+            *   [unfollowAllNotFollowingBack()](#unfollowallnotfollowingback-1)
+
 API Documentation
 -----------------
 
-### `ifFollow`
+### `IfFollow`
 
-Represents a module for managing followers and followings on GitHub.
+Represents a class for managing followers and followings on GitHub.
 
-#### Create an instance of `ifFollow`:
+#### Initialize:
+
+```javascript
+
+const ifFollow = require('if-follow-package');
+```
+
+##### ifFollow is a function which creates an instance of IfFollow
+
+#### Create an instance of `IfFollow`:
 
 ```javascript
 
@@ -424,7 +465,7 @@ Contributing
 
 If you find any issues or have suggestions for improvement, please open an issue or create a pull request on the GitHub repository.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
+[See CONTRIBUTING guidelines](CONTRIBUTING.md) for more information.
 
 Best Practices:
 ---------------
@@ -434,6 +475,8 @@ Best Practices:
 *   Meaningful variable and function names for clarity.
 *   Clear and concise comments to enhance understanding.
 *   Proper indentation and formatting for visual organization.
+
+[See mdn guidelines](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript) for more information.
 
 License
 -------
@@ -446,7 +489,8 @@ History
 -------
 
 For more details about what has changed in each version of this project.  
-[See CHANGELOG.md](CHANGELOG.md).
+
+[See CHANGELOG](CHANGELOG.md)
 
 [npm-image]: https://img.shields.io/npm/v/if-follow-package
 [npm-url]: https://www.npmjs.com/package/if-follow-package
