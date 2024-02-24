@@ -70,7 +70,7 @@ npm install @farhan7reza7/if-follow-package
 
 ```html
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/if-follow-package@2.2.2/lib/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/if-follow-package@3.0.0/lib/index.min.js"></script>
 ```
 
 [Get any supported version script tag](https://github.com/farhan7reza7/if-follow-package/wiki/Supported-versions-script-tags)
@@ -92,7 +92,7 @@ const ifFollow = require('if-follow-package'); // can use any if authenticated
 
 ```html
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/if-follow-package@2.2.2/lib/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/if-follow-package@3.0.0/lib/index.min.js"></script>
 ```
 
 ### `Create an instance:`
@@ -537,3 +537,4 @@ For more details about what has changed in each version of this project.
 [licence-url]: https://opensource.org/licenses/MIT
 [linked-image]: https://img.shields.io/badge/LinkedIn-FarhanReza-blue
 [linked-url]: https://www.linkedin.com/in/farhan7reza7/
+
