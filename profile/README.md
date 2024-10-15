@@ -26,6 +26,7 @@ if-follow-package
 [![npm-build-published][npm-ci-image]][npm-ci-url]
 [![github-build-published][github-image]][github-url]
 [![CI][ci-image]][ci-url]
+[![Codecov-report][codecov-img]][codecov-url]
 [![License][license-image]][licence-url]
 [![LinkedIn][linked-image]][linked-url]
 
@@ -69,8 +70,8 @@ npm install @farhan7reza7/if-follow-package
 **Can include in page `using script tag` from CDN**
 
 ```html
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/if-follow-package@3.0.0/lib/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.28.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/if-follow-package@3.0.1/lib/index.min.js"></script>
 ```
 
 [Get any supported version script tag](https://github.com/farhan7reza7/if-follow-package/wiki/Supported-versions-script-tags)
@@ -91,7 +92,7 @@ const ifFollow = require('if-follow-package'); // can use any if authenticated
 **Can include in html page `using script tag` from `CDN`**
 
 ```html
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.28.0/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/if-follow-package@3.0.0/lib/index.min.js"></script>
 ```
 
@@ -117,63 +118,64 @@ const followController = ifFollow(yourUsername, yourToken);
 ### `Use Methods to manage follow:`
 <!-- ----- -->
 
-- ##### Get a list of users who are not following you back
+* ##### Get a list of users who are not following you back 
 ```javascript
 const notFollowingBackList = followController.whoNotFollowingBack();
 
 ```
 
+* ##### Get a list of users who are following you back
 
-- ##### Get a list of users who are following you back
 ```javascript
 const followingBackList = followController.whoFollowingBack();
 
 ```
 
+* ##### Check if a specific user is following you back
 
-- ##### Check if a specific user is following you back
 ```javascript
 const isFollowingBackMessage = followController.isFollowingBack('username');
 
 ```
 
+* ##### Unfollow a user who is not following you back
 
-- ##### Unfollow a user who is not following you back
 ```javascript
 followController.unfollowNotFollowingBack('username');
 
 ```
 
+* ##### Unfollow all users who are not following you back
 
-- ##### Unfollow all users who are not following you back
 ```javascript
 followController.unfollowAllNotFollowingBack();
 
 ```
 
+* ##### Check if a user is following you
 
-- ##### Check if a user is following you
 ```javascript
 const isFollowerMessage = followController.isFollower('username');
 
 ```
 
+* ##### Check if you are following a user
 
-- ##### Check if you are following a user
 ```javascript
 const isFollowingMessage = followController.isFollowing('username');
 
 ```
 
+* ##### Get the total number of followers
 
-- ##### Get the total number of followers
 ```javascript
 const totalFollowersMessage = followController.totalFollowers();
 
 ```
 
 
-- ##### Get the total number of followings
+* ##### Get the total number of followings
+  
 ```javascript
 const totalFollowingsMessage = followController.totalFollowings();
 
@@ -199,10 +201,10 @@ result1.then((result) => {
 });
 
 // Test case: user is not a follower
-const result2 = followController.isFollower('diff-ymd-package');
+const result2 = followController.isFollower('if-follow-package');
 
 result2.then((result) => {
-  console.log(result);  // Output: "No, diff-ymd-package does not follow you!"
+  console.log(result);  // Output: "No, if-follow-package does not follow you!"
 });
 
 ```
@@ -258,7 +260,7 @@ result6.then((result) => {
 const result7 = followController.whoNotFollowingBack();
 
 result7.then((result) => {
-  console.log(result); // Output: ["diff-ymd-package", "Open-Sourced-Org", "username4", "usernameN"]
+  console.log(result); // Output: ["if-follow-package", "Open-Sourced-Org", "username4", "usernameN"]
 }); 
 
 ```
@@ -287,10 +289,10 @@ result9.then((result) => {
 });  
 
 // Test case: user is not following back
-const result10 = followController.isFollowingBack('diff-ymd-package');
+const result10 = followController.isFollowingBack('if-follow-package');
 
 result10.then((result) => {
-  console.log(result); // Output: "No, diff-ymd-package does not following back!"
+  console.log(result); // Output: "No, if-follow-package does not following back!"
 }); 
 
 ```
@@ -300,8 +302,8 @@ result10.then((result) => {
 ```javascript
 
 // Test case: unfollow a user who is not following back
-const result11 = followController.unfollowNotFollowingBack('diff-ymd-package');
-                 //Console Output: "Unfollowed: diff-ymd-package"
+const result11 = followController.unfollowNotFollowingBack('if-follow-package');
+                 //Console Output: "Unfollowed: if-follow-package"
 
 // not needed to console, because internally log message, just only call
 result11.then((result) => {
@@ -525,6 +527,12 @@ For more details about what has changed in each version of this project.
 
 [See CHANGELOG](https://github.com/farhan7reza7/if-follow-package/blob/main/CHANGELOG.md)
 
+## External Links
+
+[See if-follow-package live doc](https://if-follow-package.github.io/if-follow-package/)
+  
+[See if-follow-package wiki](https://github.com/farhan7reza7/if-follow-package/wiki)
+
 [npm-image]: https://img.shields.io/npm/v/if-follow-package
 [npm-url]: https://www.npmjs.com/package/if-follow-package
 [npm-ci-image]: https://github.com/farhan7reza7/if-follow-package/actions/workflows/npm-publish-npm-registry.yml/badge.svg
@@ -537,4 +545,5 @@ For more details about what has changed in each version of this project.
 [licence-url]: https://opensource.org/licenses/MIT
 [linked-image]: https://img.shields.io/badge/LinkedIn-FarhanReza-blue
 [linked-url]: https://www.linkedin.com/in/farhan7reza7/
-
+[codecov-img]: https://codecov.io/gh/farhan7reza7/if-follow-package/graph/badge.svg?token=EGJBGFE9YR
+[codecov-url]: https://codecov.io/gh/farhan7reza7/if-follow-package
